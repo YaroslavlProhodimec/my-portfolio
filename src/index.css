@@ -53,6 +53,9 @@
   .btn {
     @apply rounded-full font-primary text-white font-medium;
   }
+  .btn-micro {
+    @apply h-[68px] px-6 text-sm;
+  }
   .btn-sm {
     @apply h-[48px] px-6 text-sm;
   }
