@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assets/photo.png'
+import Logo from '../assets/phot.png'
 import {FaDribbble, FaGithub,FaYoutube} from 'react-icons/fa'
 import {TypeAnimation} from "react-type-animation";
 import {motion} from "framer-motion";

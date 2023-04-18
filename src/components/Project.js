@@ -21,7 +21,7 @@ const services = [
     },
     {
         name: 'Tools',
-        description: ' GitHub, Storybook, Material-UI, Figma, Fhotoshop, Postman',
+        description: ' GitHub, Storybook, Material-UI, Figma, Fhotoshop, Postman, Ant Design',
         link: 'learn more',
     },
 ]
