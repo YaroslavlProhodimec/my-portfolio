@@ -10,13 +10,13 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setSent(true)
         emailjs.sendForm("service_1vt4uvr", "template_49mizuw", form.current, "ZfjE6Ea3X575X3xDn")
-            .then((result) => {
-                alert(result.text)
-                setSent(true)
+            .then(() => {
+
+                setTimeout(() => setSent(false), 3000)
             }, (error) => {
                 alert(error.text)
-                setSent(true)
             })
         e.target.reset();
     }
@@ -35,11 +35,11 @@ const Contact = () => {
                                           repeatDelay: 15,
                                           repeatType: 'reverse',
                                           type: 'tween'
-                                      }} className='flex-1 flex justify-start items-center'>
+                                      }} className='flex-1 flex  justify-start items-center'>
                     <div>
                         <h4 className=' text-x1 uppercase text-blue-600 font-medium mb-2 tracking-wide'>Get in
                             touch</h4>
-                        <h2 className='text-[45px] lg:text-[90px] leading-none mb-12'>Let's work <br/> together!</h2>
+                        <h2 className='text-[45px] lg:text-[90px]  leading-none mb-12'>Let's work <br/> together!</h2>
 
                     </div>
                 </motion.div>}
@@ -51,10 +51,10 @@ const Contact = () => {
                                          repeatDelay: 15,
                                          repeatType: 'reverse',
                                          type: 'tween'
-                                     }} className='flex-1 flex justify-center  items-center'>
+                                     }} className='flex-1 flex  min-h-full justify-center  items-center'>
                     <div>
 
-                        <h2 className='text-[45px] lg:text-[90px] leading-none mb-12'><br/> Message Send!</h2>
+                        <h2 className='text-[45px] lg:text-[90px]   leading-none mt-72 mb-96'><br/> Message Send!</h2>
 
                     </div>
 
@@ -90,11 +90,7 @@ const Contact = () => {
                               placeholder='Your message'
                               name='user_message' required
                     ></textarea>
-                    <button onChange={()=>sendEmail()} onClick={() => {
-                        setSent(true)
-                        setTimeout(() => setSent(false), 3000)
-                    }
-                    } type='submit' className='btn btn-lg'>Send message
+                    <button type='submit' className='btn btn-lg'>Send message
                     </button>
                 </motion.form>}
             </div>
