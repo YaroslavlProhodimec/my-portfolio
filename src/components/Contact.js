@@ -10,7 +10,7 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        setSent(true)
+         setSent(true)
         emailjs.sendForm("service_1vt4uvr", "template_49mizuw", form.current, "ZfjE6Ea3X575X3xDn")
             .then(() => {
 
@@ -54,7 +54,7 @@ const Contact = () => {
                                      }} className='flex-1 flex  min-h-full justify-center  items-center'>
                     <div>
 
-                        <h2 className='text-[45px] lg:text-[90px]   leading-none mt-72 mb-96'><br/> Message Send!</h2>
+                        <h2 className='text-[45px] mt-72 mb-96 lg:text-[90px]   leading-none '><br/> Message Send!</h2>
 
                     </div>
 
