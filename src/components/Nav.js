@@ -2,7 +2,7 @@ import React from 'react';
 import {BsInstagram} from 'react-icons/bs';
 import {MdContactPhone} from 'react-icons/md';
 import {BiHomeAlt,BiUser} from 'react-icons/bi';
-import {BsClipboardData, BsBriefcase,BsChatSquare} from 'react-icons/bs';
+import {BsClipboardData} from 'react-icons/bs';
 import {Link} from 'react-scroll'
 const Nav = () => {
   return <nav className='fixed bottom-2 lg:bottom-8 w-full overflow-hidden z-50'>
@@ -15,7 +15,7 @@ const Nav = () => {
               smooth spy={true}
               to='header'
               // offset='-200'
-              classname='cursor-pointer w-[60px] h-[60px]  flex  items-center justify-center' >
+              className='cursor-pointer w-[60px] h-[60px]  flex  items-center justify-center' >
          <BiHomeAlt/>
         </Link>
         <Link activeClass='active' smooth spy={true} to='about' className='cursor-pointer w-[60px] h-[60px] flex  items-center justify-center'>
